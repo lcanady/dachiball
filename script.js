@@ -1,4 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
+
+    const res = await fetch("http://worldtimeapi.org/api/timezone");
+    const data = await res.json();
+    console.log(data);
+
+
     const canvas = document.getElementById('ballCanvas');
     const ctx = canvas.getContext('2d');
 
