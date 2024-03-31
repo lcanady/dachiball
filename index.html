@@ -5,33 +5,38 @@
     <title>Dachiball</title>
     <style>
         body {
-            
             background: #824840 url("imgs/sullybg.png");
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
-            margin: 20px;
+            margin: 0;
             padding: 0;
             overflow: hidden;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column; /* Elements should stack vertically */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
             height: 100vh;
         }
         canvas {
-
             max-width: 1024px;
-            max-height: 1024px;
-            min-width: 100%;
-            min-height: 95%;
-            aspect-ratio: 1 / 1;
+           
+            max-height: 55%;
+            width: 80%; /* Example width, adjust as necessary */
+            aspect-ratio: 1 / 1; /* Maintain square aspect ratio */
+            
+        }
+        .svg-logo {
+            width: 50%; /* Example width, adjust as necessary */
+            margin-top: 20px; /* Space between canvas and SVG */
+            
         }
     </style>
 </head>
 <body>
     <canvas id="ballCanvas"></canvas>
+    <!-- Reference to the SVG logo -->
+    <img class="svg-logo" src="imgs/logo.svg" alt="Logo">
     <script src="script.js"></script>
 </body>
 </html>
-
-
