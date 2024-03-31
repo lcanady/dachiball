@@ -29,18 +29,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // Initial ball radius as a percentage of the canvas width
-    let ballRadius = canvas.width * 0.25; // Example: ball is 5% of the canvas width
+    let ballRadius = canvas.width * 0.22; // Example: ball is 5% of the canvas width
 
     const resizeCanvas = () => {
         canvas.width = canvas.offsetWidth;
         canvas.height = canvas.offsetHeight;
-        ballRadius = canvas.width * 0.25; // Update ball radius based on new canvas size
+        ballRadius = canvas.width * 0.22; // Update ball radius based on new canvas size
     };
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
     let x = ballRadius;
-    let dx = 4; // Change in position per frame might need adjustment for scaling
+    let dx = 50; // Change in position per frame might need adjustment for scaling
     let rotation = 0; // Ball rotation in radians
 
     const ballImage = new Image();
